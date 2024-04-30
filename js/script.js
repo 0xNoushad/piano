@@ -18,13 +18,11 @@ let happyBirthday = `G4,G4,A4,,G4,,C5,,B4,,,,
                      G4,G4,G5,,E5,,C5,,B4,,A4,,
                      F5,F5,E5,,C5,,D5,,C5,,,,`
 
-let hanezawaCaradhina = `
-C6,D6,C6,A5,G5,A5,C6,D6,C6,A5,G5,A5,
-                  E5,D5,C5,B4,A4,A4,B4,C5,D5,E5,F5,
-                  A5,G5,F5,E5,D5,D5,E5,F5,G5,A5,C6,
-                  E5,C5,A4,A4,B4,C5,D5,E5,F5,G5,A5,C6,
-                  A5,G5,F5,E5,D5,D5,E5,F5,G5,A5,C6
-                     `
+let riverFlows = `G4,G4,A4,,G4,,C5,,B4,,,,
+G4,G4,A4,,G4,,D5,,C5,,,,
+G4,G4,G5,,E5,,C5,,B4,,A4,,
+F5,F5,E5,,C5,,D5,,C5,,,, B3,,D4,,G3,,A3,B3,,,,,,`
+
                
                      
                    
@@ -147,7 +145,7 @@ controls.forEach((input) => {
 
 
 
-// adding Autoplay songs
+ 
 let playSong = (notesString, tempo, cb) => {
     let notes = notesString.split(',')
     let currentNote = 0
@@ -188,7 +186,7 @@ playBtn.addEventListener('mousedown', () => {
 
         case 2: playSong(happyBirthday, tempo, enableplaybtn); break;
 
-        case 3: playSong(hanezawaCaradhina, tempo, enableplaybtn); break;
+        case 3: playSong(riverFlows, tempo, enableplaybtn); break;
     }
 
 })
